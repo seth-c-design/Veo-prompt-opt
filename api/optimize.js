@@ -5,7 +5,7 @@ import path from 'path';
 
 // --- Configuration ---
 const PROMPT_TEMPLATE_PATH = 'Prompt_template.json';
-const MODEL_CONFIG = { model: 'gemini-1.5-pro-latest' };
+const MODEL_CONFIG = { model: 'gemini-1.5-flash-latest' };
 const GENERATION_CONFIG = {
   temperature: 1.2,
   topP: 0.95,
