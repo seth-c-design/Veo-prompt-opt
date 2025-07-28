@@ -1,0 +1,425 @@
+/* filename: style.css */
+/* Name: Grok
+   Date: July 20, 2025
+   Subject: Styles for Prompt-Craft 101 website - Updated with portfolio aesthetic
+   This external stylesheet handles the majority of styles for layout, typography, and design.
+*/
+
+/* --- Global Styles --- */
+body {
+  font-family: 'Inter', sans-serif;
+  font-size: 1em; /* Base font size */
+  line-height: 1.5em;
+  color: #fff;
+  background-color: #0a0a0a;
+  margin: 0;
+  padding: 0;
+}
+
+/* Wrapper for centered layout */
+#wrapper {
+  width: 80%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* --- Typography --- */
+h1, h2, h3 {
+  margin: 0.5em 0;
+  font-weight: 700;
+}
+
+h1 {
+  font-size: 3.5em; /* Adjusted for ems */
+  font-weight: 800;
+}
+
+h2 {
+    font-size: 2.5em; /* Adjusted for ems */
+}
+
+h3 {
+    font-size: 1.5em; /* Adjusted for ems */
+}
+
+p {
+  margin-bottom: 1em;
+  color: #a0aec0; /* Lighter gray for paragraphs */
+  font-size: 1em; /* Ensure paragraphs are 1em */
+}
+
+a {
+  color: #3b82f6; /* Blue accent for links */
+  text-decoration: none;
+  transition: color 0.3s ease;
+  font-size: 1em; /* Ensure links are 1em */
+}
+
+/* --- Semantic Tags & Layout --- */
+/* This rule is now primarily for fallback and padding/border control.
+   Positioning and background are handled by Tailwind classes in the HTML
+   for consistency (e.g., sticky, bg-black/50, backdrop-blur-lg). */
+header {
+  padding: 0; /* Let the nav element inside control padding */
+  text-align: center;
+  border-bottom: 1px solid #222;
+  transition: background-color 0.3s ease;
+}
+
+nav ul li a.current {
+  color: #3b82f6; /* Blue for active/current link */
+}
+nav ul li a.current:hover {
+  color: #60a5fa; /* Optional: Lighter blue on hover for active link */
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  padding: 1em 0;
+  margin: 0;
+}
+
+nav ul li {
+  margin: 0 1.5em;
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #3b82f6;
+}
+
+main {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 2rem;
+  padding: 2rem 0;
+}
+
+main.examples-page {
+  grid-template-columns: 1fr; /* Single column for examples page */
+}
+
+section {
+  background-color: #111;
+  border: 1px solid #222;
+  border-radius: 1rem; /* Matched to index.html's rounded-2xl */
+  padding: 2rem;
+  margin-bottom: 2em;
+}
+
+section.banner {
+  text-align: center;
+  padding: 4rem 2rem;
+  border: 1px solid #222; /* Use border instead of gradient */
+  background: #111;      /* Use solid dark color */
+  margin-bottom: 3rem;
+  min-height: 250px; /* Ensure consistent height across banners */
+}
+
+.examples-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive grid */
+  gap: 2rem;
+  padding: 2rem 0;
+  border: none; /* This container doesn't need its own border */
+  background-color: transparent;
+}
+
+.card {
+  perspective: 1000px;
+  cursor: pointer;
+  height: 300px; /* Fixed height for consistent card size */
+  background-color: transparent; /* Card itself is a transparent container */
+  border: none;
+}
+
+.inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+}
+
+.flipped {
+  transform: rotateY(180deg);
+}
+
+.front, .back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  background: #111; /* Matched to index.html container style */
+  border-radius: 1rem; /* Matched to index.html's rounded-2xl */
+  border: 1px solid #222;
+  box-sizing: border-box;
+}
+
+.back {
+  transform: rotateY(180deg);
+}
+
+.back img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  border-radius: 0.5rem;
+}
+
+.card:hover .inner:not(.flipped) {
+  transform: rotateY(10deg); /* Subtle hover tilt for non-flipped state */
+}
+
+.front h3, .back h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.front p, .back p {
+  font-size: 0.9rem;
+  line-height: 1.6;
+  color: #cbd5e0;
+  padding: 0 1rem;
+}
+
+.why-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  padding: 1rem 0;
+}
+
+.comparison-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+
+aside {
+  background-color: #111;
+  border: 1px solid #222;
+  border-radius: 1rem; /* Matched to index.html's rounded-2xl */
+  padding: 2rem;
+}
+
+footer {
+  text-align: center;
+  padding: 2em 0;
+  background-color: #000;
+  color: #718096; /* Gray for footer text */
+  font-size: 0.9em;
+  border-top: 1px solid #222;
+}
+
+/* --- Element-Specific Styles --- */
+
+/* Form styles */
+form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5em;
+}
+
+fieldset {
+  grid-column: span 2;
+  border: none;
+  padding: 0;
+  margin: 0;
+}
+
+label {
+  display: block;
+  margin-bottom: 0.5em;
+  font-weight: 600;
+  color: #cbd5e0; /* Lighter text for labels */
+}
+
+input[type="text"],
+textarea,
+select,
+input[type="date"] {
+  width: 100%;
+  padding: 0.75em;
+  box-sizing: border-box;
+  background-color: #1a202c; /* Dark input background */
+  color: #fff;
+  border: 1px solid #4a5568; /* Gray border */
+  border-radius: 0.5rem;
+  transition: border-color 0.3s ease;
+}
+
+input[type="text"]:focus,
+textarea:focus,
+select:focus,
+input[type="date"]:focus {
+  outline: none;
+  border-color: #3b82f6; /* Blue border on focus */
+}
+
+.checkbox-group,
+.radio-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em;
+  background-color: #1a202c;
+  padding: 1em;
+  border-radius: 0.5rem;
+  border: 1px solid #4a5568;
+}
+
+.checkbox-group label,
+.radio-group label {
+    font-weight: normal;
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+  margin-right: 0.5em;
+  accent-color: #3b82f6; /* Style checkbox and radio buttons */
+}
+
+button,
+input[type="reset"] {
+  grid-column: span 1;
+  background: #3b82f6;
+  color: #fff;
+  border: none;
+  padding: 0.75em 1.5em;
+  cursor: pointer;
+  border-radius: 9999px; /* Pill-shaped buttons */
+  font-weight: 600;
+  transition: background-color 0.3s ease, transform 0.2s;
+}
+
+button:hover,
+input[type="reset"]:hover {
+  background-color: #2563eb; /* Darker blue on hover */
+  transform: translateY(-2px);
+}
+
+#result {
+  grid-column: span 2;
+  width: 100%;
+  font-family: monospace;
+  background: #1a202c;
+  color: #90cdf4; /* Light blue for code */
+  padding: 1em;
+  box-sizing: border-box;
+  border-radius: 0.5rem;
+  border: 1px solid #4a5568;
+}
+
+#copyBtn {
+  background: #28a745;
+}
+
+#copyBtn:hover {
+    background: #218838;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0,0,0,0);
+  border: 0;
+}
+
+/* Flexible images */
+img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 1rem; /* Rounded corners for images */
+}
+
+/* Lists */
+ul, ol {
+  margin: 1em 0;
+  padding-left: 2em;
+}
+
+/* --- Responsive Media Query --- */
+@media screen and (max-width: 768px) {
+  main {
+    grid-template-columns: 1fr; /* Stack columns */
+  }
+
+  #wrapper {
+    width: 95%;
+  }
+
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  nav ul li {
+    margin: 0.5em 0;
+  }
+
+  form {
+    grid-template-columns: 1fr;
+  }
+
+  .comparison-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Glow Effect */
+.glow-input:focus {
+    box-shadow: 0 0 0 3px rgba(56, 189, 248, 0.5), 0 0 15px rgba(56, 189, 248, 0.7);
+    border-color: #38bdf8;
+}
+.glow-output {
+    box-shadow: 0 0 0 3px rgba(56, 189, 248, 0.5), 0 0 15px rgba(56, 189, 248, 0.7);
+    border-color: #38bdf8;
+}
+
+/* Surprise Animation */
+.surprise-overlay {
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    pointer-events: none;
+    z-index: 1000;
+    opacity: 0;
+    transition: opacity 0.5s ease-out;
+}
+.surprise-overlay.active {
+    opacity: 1;
+}
+.surprise-text {
+    font-size: 4rem;
+    font-weight: bold;
+    color: white;
+    text-shadow: 0 0 20px rgba(56, 189, 248, 0.8);
+    transform: scale(0.5);
+    opacity: 0;
+    animation: pop-in 0.8s forwards;
+}
+@keyframes pop-in {
+    0% { transform: scale(0.5); opacity: 0; }
+    50% { transform: scale(1.2); opacity: 1; }
+    100% { transform: scale(1); opacity: 1; }
+}

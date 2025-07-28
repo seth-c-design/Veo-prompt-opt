@@ -1,0 +1,64 @@
+{
+  "style": "Night-vision CCTV realism, monochrome low-lux grain, fixed security cam perspective",
+  "shot": {
+    "duration": 8,
+    "composition": "static ultra-wide shot, high-mounted CCTV cam (≈9 m up, 28 mm equiv.), entire forecourt in frame—donkey + baboon never clipped",
+    "camera_motion": "none (locked)",
+    "frame_rate": "24 fps",
+    "resolution": "960 × 540 simulated feed",
+    "film_grain": "coarse digital noise, low-light speckle"
+  },
+  "timeline": [
+    {
+      "time": "0–2 s",
+      "action": "Grey donkey enters frame left at calm walking pace; olive baboon sits upright astride just behind withers, gripping short rope around donkey’s neck."
+    },
+    {
+      "time": "2–6 s",
+      "action": "Pair crosses front of idle fuel pumps. **Donkey’s back shows slight sag under baboon’s weight; gait shifts to mild lateral sway**. Baboon counter-balances with tail lift and subtle torso lean; occasional head-turn toward minimart."
+    },
+    {
+      "time": "6–8 s",
+      "action": "They exit frame right; canopy lights cast elongated twin shadow; camera holds empty forecourt two beats."
+    }
+  ],
+  "subject": {
+    "donkey": {
+      "appearance": "medium-size grey donkey, dusty coat, calm demeanor",
+      "physics": "hooves strike concrete with realistic cadence; slight spine dip proportional to ~25 kg load"
+    },
+    "baboon": {
+      "appearance": "adult olive baboon (≈25 kg), seated squarely, grasping rope with both hands",
+      "physics": "maintains upright posture; tail used as stabiliser; minor torso shifts sync with donkey’s step cycle"
+    }
+  },
+  "scene": {
+    "location": "deserted petrol-station forecourt; pumps dark, minimart shutters down",
+    "time_of_day": "02:30 AM late night",
+    "atmosphere": "still air, faint litter rustle, distant highway hum"
+  },
+  "lighting": {
+    "primary": "overhead canopy fluorescents (6000 K), fall-off beyond forecourt",
+    "secondary": "single street-lamp rear right; creates long dual shadow"
+  },
+  "overlay": {
+    "timestamp": "2025-07-27 02:30:15",
+    "position": "top-left",
+    "style": "white monospace digits, semi-transparent 70 %"
+  },
+  "audio": {
+    "ambient": "muted (CCTV feed has no mic)"
+  },
+  "color_palette": {
+    "mode": "desaturated greyscale, slight green tint typical of low-lux CCD"
+  },
+  "visual_rules": {
+    "prohibited_elements": [
+      "baboon dismounted or walking beside donkey",
+      "donkey rearing, trotting or cantering (must walk)",
+      "cropped silhouettes—full bodies always visible",
+      "extra humans, vehicles, or signage overlays",
+      "bright advertising graphics or UI elements"
+    ]
+  }
+}

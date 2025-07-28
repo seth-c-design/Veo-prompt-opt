@@ -1,0 +1,17 @@
+{
+  "name": "veo-prompt-optimizer",
+  "version": "1.0.0",
+  "description": "A tool to generate structured JSON prompts for Google's VEO.",
+  "main": "api/optimize.js",
+  "type": "module",
+  "scripts": {
+    "start": "vercel dev"
+  },
+  "dependencies": {
+    "@google/generative-ai": "^0.17.1",
+    "formidable": "^3.5.4"
+  },
+  "engines": {
+    "node": "18.x"
+  }
+}
