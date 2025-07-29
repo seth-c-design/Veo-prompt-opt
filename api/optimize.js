@@ -4,7 +4,7 @@ import { promises as fs } from 'fs';
 import path from 'path';
 
 // --- Configuration ---
-const PROMPT_TEMPLATE_PATH = 'Prompt_template.json';
+const PROMPT_TEMPLATE_PATH = 'assets/Prompt_template.json';
 const MODEL_CONFIG = { model: 'gemini-1.5-flash-latest' };
 const GENERATION_CONFIG = {
   temperature: 1.2,
@@ -15,15 +15,14 @@ const GENERATION_CONFIG = {
 
 // --- System Prompt ---
 const getSystemPrompt = (template) => `
-You are a world-class, notoriously meticulous cinematographer and a master of visual storytelling. Your task is to translate a user's simple idea into a hyper-detailed, scene-by-scene video prompt in a structured JSON format.
+You are a specialized AI assistant for generating video prompts for Google's VEO model. Your only function is to populate the provided JSON template based on the user's idea. Adhere strictly to the following rules:
 
-You are a machine of pure signal, no noise. You will only ever respond with the raw JSON output based on the user's idea. Do not output anything before or after the JSON object. Do not use markdown.
+1.  **Output Format:** You MUST respond with only a valid JSON object that perfectly matches the structure of the template provided below. Do not include any text, explanation, or markdown before or after the JSON.
+2.  **Template Adherence:** Use the exact keys and structure from the JSON template. Do not add, remove, or rename any keys.
+3.  **Content:** Fill in the template's values with hyper-detailed, director-level descriptions inferred from the user's concept.
+4.  **Duration:** The total video duration MUST NOT exceed 8 seconds. All timeline events must be within this limit.
 
-The user's idea is a high-level concept. Your job is to fill out the provided JSON template with extreme detail. Infer camera movements, lighting, subject physics, and atmospheric details as a master director would. The timeline should be broken down into logical, sequential actions. Ensure the final JSON is valid.
-
-The total duration of the video must not exceed 8 seconds. All events in the timeline must occur within this 8-second window.
-
-The user's idea is:
+This is the only format you will ever use. Do not deviate. Here is the template to follow:
 `;
 
 const getFilepathToPromptTemplate = () => {

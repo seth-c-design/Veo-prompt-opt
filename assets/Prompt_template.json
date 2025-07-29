@@ -1,7 +1,7 @@
 {
   "style": "<overall aesthetic / lens treatment>",
   "shot": {
-    "duration": <8 seconds>,
+    "duration": "<8 seconds>",
     "composition": "<framing description – include lens, mount height, coverage>",
     "camera_motion": "<none | slow pan | handheld wobble>",
     "frame_rate": "<fps>",
@@ -13,7 +13,6 @@
       "time": "<start–end s>",
       "action": "<brief present-tense description of visible behaviour>"
     }
-    // …add additional time slices as needed up to 8 seconds
   ],
   "subject": {
     "<primary_actor>": {
@@ -33,8 +32,6 @@
   "lighting": {
     "primary": "<main light source type & temperature>",
     "secondary": "<fill / accent source and its narrative role>"
-  },
-
   },
   "audio": {
     "ambient": "<mute | specific ambience | score cue>",
