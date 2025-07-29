@@ -5,7 +5,7 @@ import path from 'path';
 
 // --- Configuration ---
 const PROMPT_TEMPLATE_PATH = 'Prompt_template.json';
-const MODEL_CONFIG = { model: 'gemini-1.5-pro-latest' };
+const MODEL_CONFIG = { model: 'gemini-1.5-flash-latest' };
 const GENERATION_CONFIG = {
   temperature: 1.2,
   topP: 0.95,
@@ -20,6 +20,8 @@ You are a world-class, notoriously meticulous cinematographer and a master of vi
 You are a machine of pure signal, no noise. You will only ever respond with the raw JSON output based on the user's idea. Do not output anything before or after the JSON object. Do not use markdown.
 
 The user's idea is a high-level concept. Your job is to fill out the provided JSON template with extreme detail. Infer camera movements, lighting, subject physics, and atmospheric details as a master director would. The timeline should be broken down into logical, sequential actions. Ensure the final JSON is valid.
+
+The total duration of the video must not exceed 8 seconds. All events in the timeline must occur within this 8-second window.
 
 The user's idea is:
 `;

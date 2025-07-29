@@ -1,0 +1,83 @@
+{
+  "style": "Studio still‑life realism, rich navy backdrop, soft‑box strobe subtle fall‑off",
+  "shot": {
+    "duration": 8,
+    "composition": "static mid‑close (≈85 mm FF) — tall candlestick‑vase with purple clematis on left third; generous negative space right for bird’s path; tabletop edge visible low frame",
+    "camera_motion": "none (locked tripod)",
+    "frame_rate": "24 fps",
+    "resolution": "1536 × 1024 (3 : 2)",
+    "film_grain": "minimal, fine‑grain photographic realism"
+  },
+  "timeline": [
+    {
+      "time": "0–1 s",
+      "action": "Establish: clematis in razor focus, navy backdrop softly blurred; absolute stillness."
+    },
+    {
+      "time": "1–2 s",
+      "action": "Golden turquoise‑throated puffleg enters from frame right, slightly out of focus, wingbeat blur already visible."
+    },
+    {
+      "time": "2–3 s",
+      "action": "Bird eases into hover beside nearest blossom; body locks sharp, wings remain motion‑blurred at ~80 Hz."
+    },
+    {
+      "time": "3–4 s",
+      "action": "Beak dips into clematis throat; petals flutter from down‑wash; fine pollen motes drift."
+    },
+    {
+      "time": "4–5 s",
+      "action": "Hummingbird performs quick backward flip in place, then angles out toward frame right."
+    },
+    {
+      "time": "5–6 s",
+      "action": "Accelerates and exits right; trailing wing‑blur streak tapers; vase regains complete stillness."
+    },
+    {
+      "time": "6–8 s",
+      "action": "Hold two‑second tableau on vase and backdrop to punctuate calm return."
+    }
+  ],
+  "subject": {
+    "hummingbird": {
+      "appearance": "adult turquoise‑throated puffleg with iridescent golden overtones, 9 cm length, vivid emerald undertone at throat when light hits",
+      "physics": "wingbeat ≈80 Hz; precise hover; 5 g mass causes negligible stem deflection yet visible petal tremor"
+    },
+    "clematis": {
+      "appearance": "deep‑violet blossoms with delicate veining; fresh green foliage",
+      "physics": "stems sway subtly under air currents from bird; petals recover within 0.5 s"
+    }
+  },
+  "scene": {
+    "location": "dark‑navy seamless backdrop, matte walnut tabletop",
+    "time_of_day": "artificial daylight (5600 K)",
+    "atmosphere": "silent studio, only the faint hum of electronics"
+  },
+  "lighting": {
+    "primary": "large soft‑box 45° camera‑left, 6500 K diffused key on flowers and bird",
+    "secondary": "low‑intensity rim from camera‑right bounce card to carve edges of hummingbird and vase"
+  },
+  "audio": {
+    "ambient": "mute",
+    "fx": [
+      "high‑pitched wing‑hum (1–6 s), volume peaking at hover",
+      "tiny rustle of petals (3‑4 s)"
+    ]
+  },
+  "color_palette": {
+    "mode": "realistic",
+    "notes": "deep navy (#0C2340) backdrop, rich violet clematis, warm golden‑emerald bird sheen, neutral wood base"
+  },
+  "visual_rules": {
+    "prohibited_elements": [
+      "visible camera gear or reflections",
+      "lens flares, UI graphics, or timestamps",
+      "any additional fauna or props"
+    ],
+    "required_elements": [
+      "studio‑quality lighting",
+      "sharp focus on clematis and bird’s body",
+      "continuous motion‑blur on beating wings"
+    ]
+  }
+}

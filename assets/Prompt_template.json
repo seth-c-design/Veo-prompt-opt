@@ -1,0 +1,55 @@
+{
+  "style": "<overall aesthetic / lens treatment>",
+  "shot": {
+    "duration": <8 seconds>,
+    "composition": "<framing description – include lens, mount height, coverage>",
+    "camera_motion": "<none | slow pan | handheld wobble>",
+    "frame_rate": "<fps>",
+    "resolution": "<w × h OR target aspect ratio>",
+    "film_grain": "<texture or noise model>"
+  },
+  "timeline": [
+    {
+      "time": "<start–end s>",
+      "action": "<brief present-tense description of visible behaviour>"
+    }
+    // …add additional time slices as needed up to 8 seconds
+  ],
+  "subject": {
+    "<primary_actor>": {
+      "appearance": "<size, colour, distinguishing features>",
+      "physics": "<mass, locomotion notes, interactions>"
+    },
+    "<secondary_actor>": {
+      "appearance": "<…>",
+      "physics": "<…>"
+    }
+  },
+  "scene": {
+    "location": "<setting with 1–2 defining props>",
+    "time_of_day": "<clock time or golden hour, etc.>",
+    "atmosphere": "<ambient sounds, weather, background activity>"
+  },
+  "lighting": {
+    "primary": "<main light source type & temperature>",
+    "secondary": "<fill / accent source and its narrative role>"
+  },
+
+  },
+  "audio": {
+    "ambient": "<mute | specific ambience | score cue>",
+    "fx": "<optional one-shot SFX list>"
+  },
+  "color_palette": {
+    "mode": "<greyscale | hyper-saturated | duotone>",
+    "notes": "<tint or LUT hints>"
+  },
+  "visual_rules": {
+    "prohibited_elements": [
+      "<list any disallowed objects, actions, or UI artefacts>"
+    ],
+    "required_elements": [
+      "<optional list of must-have cues (logo, prop, etc.)>"
+    ]
+  }
+}
